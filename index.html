@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="社会学计算社会科学研究项目网站，用于展示青年轻食行为与当代青年生活方式研究。">
+  <title>{{研究项目名称}} | 研究首页</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="brand" href="index.html">{{研究项目名称}}</a>
+      <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false">菜单</button>
+      <div class="nav-links">
+        <a class="active" href="index.html">首页</a>
+        <a href="research.html">项目介绍</a>
+        <a href="privacy.html">隐私与伦理</a>
+        <a href="callback.html">OAuth回调</a>
+        <a href="contact.html">联系</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Computational Social Science Research</p>
+          <h1>青年轻食行为与当代青年生活方式研究</h1>
+          <p class="lead">
+            本网站用于展示研究者身份、研究项目说明、数据伦理原则与联系方式，并作为微博开放平台网站应用申请中的应用网址和 OAuth 回调页面承载站点。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="research.html">查看研究项目</a>
+            <a class="button secondary" href="privacy.html">查看数据伦理说明</a>
+          </div>
+        </div>
+        <figure class="hero-visual" aria-label="研究网站视觉图">
+          <img src="assets/research-visual.svg" alt="文本数据、研究伦理和主题分析的简洁示意图">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column">
+        <article>
+          <h2>研究者简介</h2>
+          <p>
+            研究者：{{姓名}}。本人为社会学方向研究生，关注数字平台、青年文化、身体实践与日常生活方式的社会学议题。
+          </p>
+          <p>
+            所属单位：{{学校}} {{学院}}。本网站仅用于学术研究项目展示与开放平台应用信息说明，不提供商业服务。
+          </p>
+        </article>
+        <aside class="info-panel">
+          <h2>联系方式</h2>
+          <dl class="meta-list">
+            <div>
+              <dt>姓名</dt>
+              <dd>{{姓名}}</dd>
+            </div>
+            <div>
+              <dt>学校/学院</dt>
+              <dd>{{学校}} {{学院}}</dd>
+            </div>
+            <div>
+              <dt>邮箱</dt>
+              <dd>{{邮箱}}</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section muted">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Project Overview</p>
+          <h2>研究项目概况</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <h3>研究项目名称</h3>
+            <p>{{研究项目名称}}</p>
+          </article>
+          <article class="card">
+            <h3>研究背景</h3>
+            <p>
+              近年来，轻食、低卡饮食、减脂餐、健康饮食等话题在青年群体的网络表达中频繁出现，反映了身体管理、健康意识、消费观念和身份表达的变化。
+            </p>
+          </article>
+          <article class="card">
+            <h3>研究目的</h3>
+            <p>
+              本研究希望通过公开网络文本分析，理解青年群体如何在轻食话语中表达自律、健康、焦虑、消费选择和生活方式认同。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-block">
+        <h2>数据来源说明</h2>
+        <p>
+          研究数据来自公开可访问的网络文本样本，包括公开话题讨论、公开评论和公开内容摘要等。数据收集将遵守平台规则，仅用于学术研究，不采集私人聊天、非公开内容或受访问限制的数据。
+        </p>
+        <h2>数据伦理说明</h2>
+        <p>
+          研究过程中不采集手机号、身份证号、精确地址、真实姓名等敏感个人信息；不在公开报告中呈现可识别个体身份的信息；数据清洗阶段将进行匿名化处理。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© {{姓名}} | {{研究项目名称}}</p>
+      <p>网站域名：{{网站域名}}</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

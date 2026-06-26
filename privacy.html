@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="隐私保护与数据伦理说明。">
+  <title>隐私与数据伦理 | {{研究项目名称}}</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="brand" href="index.html">{{研究项目名称}}</a>
+      <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false">菜单</button>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="research.html">项目介绍</a>
+        <a class="active" href="privacy.html">隐私与伦理</a>
+        <a href="callback.html">OAuth回调</a>
+        <a href="contact.html">联系</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <p class="eyebrow">Privacy and Research Ethics</p>
+        <h1>隐私与数据伦理说明</h1>
+        <p class="lead">本项目遵循公开性、最小必要、匿名化和学术用途限定原则。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="ethics-list">
+          <article>
+            <h2>公开数据原则</h2>
+            <p>仅使用公开可访问内容，不采集私人聊天、非公开页面或需要绕过访问限制才能获取的数据。</p>
+          </article>
+          <article>
+            <h2>敏感信息排除</h2>
+            <p>不采集手机号、邮箱、真实姓名、身份证号、精确地址等敏感信息。</p>
+          </article>
+          <article>
+            <h2>身份匿名化</h2>
+            <p>不保存微博账号 ID、主页链接等可识别个人身份的信息；研究输出中不呈现可追溯到具体个人的信息。</p>
+          </article>
+          <article>
+            <h2>学术用途限定</h2>
+            <p>数据仅用于学术研究、课程研究报告或毕业论文材料，不用于商业营销、用户画像或个体追踪。</p>
+          </article>
+          <article>
+            <h2>数据清洗处理</h2>
+            <p>数据清洗时将进行匿名化处理，去除无关字段、广告文本和可能包含敏感信息的内容。</p>
+          </article>
+          <article>
+            <h2>平台规则遵守</h2>
+            <p>研究过程遵守平台规则和研究伦理，不绕过登录、验证码、访问限制或平台风控机制。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© {{姓名}} | {{研究项目名称}}</p>
+      <p>网站域名：{{网站域名}}</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="青年轻食行为与当代青年生活方式研究项目介绍。">
+  <title>项目介绍 | {{研究项目名称}}</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="主导航">
+      <a class="brand" href="index.html">{{研究项目名称}}</a>
+      <button class="nav-toggle" type="button" aria-label="展开导航" aria-expanded="false">菜单</button>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a class="active" href="research.html">项目介绍</a>
+        <a href="privacy.html">隐私与伦理</a>
+        <a href="callback.html">OAuth回调</a>
+        <a href="contact.html">联系</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <p class="eyebrow">Research Project</p>
+        <h1>青年轻食行为与当代青年生活方式研究</h1>
+        <p class="lead">围绕青年网络文本中的轻食话语，分析身体管理、健康意识、消费文化、自律文化和身份表达等生活方式特征。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-block">
+        <h2>研究问题</h2>
+        <ol class="ordered-list">
+          <li>当代青年在轻食话语中呈现出哪些生活方式特征？</li>
+          <li>轻食行为如何与身体管理、健康意识、消费文化、自律文化和身份表达相关？</li>
+          <li>这些生活方式特征形成的社会机制是什么？</li>
+        </ol>
+
+        <h2>研究方法</h2>
+        <p>
+          本研究采用网络文本分析、词频分析、主题分类、内容分析和必要的人工复核。自动化分析结果将作为探索性材料，并结合人工复核提升解释的准确性。
+        </p>
+
+        <h2>数据范围</h2>
+        <p>
+          数据范围限于公开可访问的网络文本。研究不采集私人信息，不绕过登录、验证码、访问限制或平台风控机制，不保存可识别个人身份的信息。
+        </p>
+
+        <h2>预期成果</h2>
+        <p>
+          本项目预期形成学术论文、课程研究报告或毕业论文材料，用于社会学与计算社会科学方向的学术训练和研究写作。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© {{姓名}} | {{研究项目名称}}</p>
+      <p>网站域名：{{网站域名}}</p>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      navLinks.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
